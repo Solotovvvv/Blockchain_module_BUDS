@@ -74,14 +74,14 @@ include '../includes/config.php';
                         data-accordion="false">
                        
                         <li class="nav-item">
-                            <a href="department.php" class="nav-link" id="active">
+                            <a href="index.php" class="nav-link" id="">
                                 <i class="nav-icon fas fa-user"></i>
                                 <p>Add Department</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="Approved.php" class="nav-link" id="">
+                            <a href="Approved.php" class="nav-link" id="active">
                                 <i class="nav-icon fas fa-user"></i>
                                 <p>APPROVED DEPARTMENT</p>
                             </a>
@@ -106,14 +106,13 @@ include '../includes/config.php';
             <!-- Main content table -->
             <div class="container">
                 <div class="card p-3">
-                    <button class="btn btn-primary mb-3" id="add-department" data-toggle="modal"
-                        data-target="#addDepartment">Add Department</button>
+               
                     <div class="card p-3">
                         <div class="table-responsive">
-                            <table class="table table-striped table-bordered" id="department">
+                            <table class="table table-striped table-bordered" id="approvedDepartment">
                                 <thead>
                                     <th>Department Name</th>
-                                    <th>Status</th>
+                                    <th>Duration</th>
                                     <th>Action</th>
                                 </thead>
                             </table>
@@ -123,32 +122,6 @@ include '../includes/config.php';
             </div>
         </div>
 
-        <!-- add department modal -->
-        <div class="modal fade" id="addDepartment" tabindex="-1" role="dialog" aria-labelledby="addDepartmentModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="addDepartmentModalLabel">Add Department</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label for="professorName">Department:</label>
-                            <input type="text" class="form-control" id="Department1"
-                                placeholder="Enter Department Name">
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"
-                                onclick="AddDepartment()">Add</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- edit details modal -->
         <div class="modal fade" id="update_department" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -160,23 +133,25 @@ include '../includes/config.php';
                     </div>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label for="">Department:</label>
-                            <input type="text" class="form-control" id="Update_Department1"
+                            <label for="">Company:</label>
+                            <input type="text" class="form-control" id="Update_Name"
                                 placeholder="Edit Department Name">
 
-                            <label for="" class="mt-2">Status:</label>
-                            <select class="form-control" name="" id="Update_status1">
-                                <option value="" readonly>Select</option>
-                                <option value="Enable">Enable</option>
-                                <option value="Disable">Disable</option>
-                            </select>
+                            <label for="">Duration:</label>
+                            <input type="text" class="form-control" id="Update_Duration"
+                                placeholder="Add Duration">
+
+                            <label for="">HASH:</label>
+                            <input type="text" class="form-control" id="hashcode">
+                    
+                            
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary" data-dismiss="modal"
-                            onclick="update1()">Update</button>
-                        <input type="hidden" id="hiddendata1">
+                            onclick="update2()">Update</button>
+                        <input type="hidden" id="hiddendata2">
                     </div>
                 </div>
             </div>
@@ -203,7 +178,7 @@ include '../includes/config.php';
     <!-- <script src="https://cdn.jsdelivr.net/npm/web3@1.5.3/dist/web3.min.js"></script> -->
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/4.1.0/web3.min.js" integrity="sha512-COI914Q0wT4y7lcjXOxq2fdsz6aOj8BcC2ojR1mwyLYpujAOjhaRdEgVVX2TFxirzLDpQD5CmEHwSu48VDJejg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="index.js"></script>
+    <script src="blockchain.js"></script>
 
    
     

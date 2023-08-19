@@ -33,3 +33,6 @@ contract CompanyContractRegistry {
         return keccak256(abi.encodePacked(companyName, duration, timestamp));
     }
 }
+
+
+
