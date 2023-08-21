@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@metamask/legacy-web3": "^2.0.0",
+    "ethers": "^6.7.1",
+    "web3": "^4.1.0"
+  }
+}
